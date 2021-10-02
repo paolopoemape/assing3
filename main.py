@@ -14,6 +14,11 @@ def count_number_modals(text1, text2):
     print(len(result1))
     print(len(result2))
 
+def count_number_contraction(text1, text2):
+    result1 = re.findall(r"\w+[`'’]\w{1,2}",text1)
+    result2 = re.findall(r"\w+[`'’]\w{1,2}", text2)
+    print(len(result1))
+    print(len(result2))
 
 text1 = "WASHINGTON — Pentagon leaders publicly acknowledged on Tuesday that they advised President Biden not to withdraw all troops from Afghanistan ahead of a chaotic evacuation in which 13 U.S. service members died in a suicide bombing and 10 Afghan civilians were killed in an American drone strike." \
         "During an expansive Senate hearing on the war in Afghanistan, Gen. Mark A. Milley, the chairman of the Joint Chiefs of Staff, also defended his actions in the tumultuous last months of the Trump administration, insisting that calls to his Chinese counterpart and a meeting in which he told generals to alert him if the president tried to launch a nuclear weapon were part of his duties as the country’s top military officer." \
@@ -34,6 +39,6 @@ text2 = "In a perfect world, egos would be suppressed and inquisitive minds woul
         "Between jock taxes, state taxes, local taxes, agent fees, taking care of friends and family, and the effects behaviors now can have on your lifestyle later, it’s a lot to process. That’s precisely why the"
 
 
-
 count_number_pronouns(text1, text2)
 count_number_modals(text1, text2)
+count_number_contraction(text1, text2)
